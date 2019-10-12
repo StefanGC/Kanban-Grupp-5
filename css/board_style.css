@@ -1,0 +1,68 @@
+
+  
+  body {
+    
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #0079bf !important;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    background-color: #0079bf;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+  
+  .card {
+    margin: 10px;
+    width: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    cursor: move;
+  }
+  
+  .card.dragElem {
+    opacity: 0.4;
+  }
+  .card.over {
+    border: 1px solid rgb(255, 159, 159);
+    background-color: rgb(255, 159, 159);
+  }
+
+  .itemsList.dragElem {
+    opacity: 0.4;
+  }
+  .itemsList.over {
+    min-height: 50px;
+    border-radius: 3px;
+    background-color: rgb(255, 159, 159);
+    margin: 10px;
+  }
+
+  #board {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list {
+    text-align: center;
+    margin: 10px;
+    padding: 20px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: #EAEAEA;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 250px;
+    min-height: 50px;
+  }
+
+  .itemsList{
+    margin: 0;
+    min-height: 10px;
+  }
+  
