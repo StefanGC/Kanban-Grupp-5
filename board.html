@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/board_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="board" class="container">
+            <div id="todo" class="list">
+                    <h2>To do</h2>                        
+                            <div id="issue3" class="card" draggable="true">
+                                <h6>Issue 3</h6>
+                                <p>Skapa index.html som inloggning sida.</p> 
+                            </div>
+                            <div id="issue4" class="card" draggable="true">
+                                <h6>Issue 4</h6>
+                                <p>Bygga script för inloggning.</p> 
+                            </div>
+                            <div id="issue5" class="card" draggable="true">
+                                <h6>Issue 5</h6>
+                                <p>Skapa sidan för tavlan.</p> 
+                            </div>
+                            <div id="issue6" class="card" draggable="true">
+                                <h6>Issue 6</h6>
+                                <p>Bygga script för tavlan.</p> 
+                            </div>
+                            <div id="issue7" class="card" draggable="true">
+                                <h6>Issue 7</h6>
+                                <p>Skapa styles för inloggning.</p> 
+                            </div>
+                            <div id="issue8" class="card" draggable="true">
+                                <h6>Issue 8</h6>
+                                <p>Skapa styles för tavlan.</p> 
+                            </div> 
+                            <div class="itemsList"></div>
+                            <a href="#">+ Lägg till ett kort</a>
+                    </div>
+                    <div id="doing" class="list">
+                            <h2>Doing</h2>
+                            <div class="itemsList"></div>
+                            <a href="#">+ Lägg till ett kort</a>
+                    </div>
+                    <div id="test" class="list">
+                            <h2>Test</h2>
+                            <div class="itemsList"></div>
+                            <a href="#">+ Lägg till ett kort</a>                            
+                    </div>                    
+                    <div id="done" class="list">
+                            <h2>Done</h2>
+                            <div id="issue1" class="card" draggable="true">
+                                <h6>Issue 1</h6>
+                                <p>Skapa ett repo och bjuda in alla.</p> 
+                            </div>
+                            <div id="issue2" class="card" draggable="true">
+                                <h6>Issue 2</h6>
+                                <p>Skapa JSON fil med inloggning för alla användare.</p> 
+                            </div>
+                            <div class="itemsList"></div>
+                            <a href="#">+ Lägg till ett kort</a>
+    </div>
+</body>
+<script src="scripts/board_script.js"></script>
+</html>
