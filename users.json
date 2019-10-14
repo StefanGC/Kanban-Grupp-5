@@ -1,18 +1,23 @@
 [
     {
+        "id":"1",
         "name":"Janne",
-        "password":1234
+        "password":"1234"
     },{ 
+        "id":"2",
         "name":"Stefan",
-        "password":1234
+        "password":"1234"
     },{
+        "id":"3",
         "name":"Roman",
-        "password":1234
+        "password":"1234"
     },{
+        "id":"4",
         "name":"Edi",
-        "password":1234
+        "password":"1234"
     },{
+        "id":"5",
         "name":"Iryna",
-        "password":1234
+        "password":"1234"
     }
 ]
