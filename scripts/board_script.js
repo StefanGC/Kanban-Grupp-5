@@ -131,6 +131,7 @@ function addNewCard(id){
   closeNewCard(id);
 }
 
+//Function för att hämta inloggad användare
 function welcomeIn () {
   if (sessionStorage.length == 2) {
     fetch('users.json')
