@@ -131,3 +131,24 @@ function addNewCard(id){
   closeNewCard(id);
 }
 
+function welcomeIn () {
+  if (sessionStorage.length == 2) {
+    fetch('users.json')
+        .then(response => response.json())
+        .then(function(jsonUsers){
+            let userFound = false;
+            for(let countUser = 0; countUser < jsonUsers.length && !userFound; countUser++){
+                if (sessionStorage.getItem('usersID') === jsonUsers[countUser].id) {
+                  userFound = true;
+                  document.getElementById("welcome").innerHTML = "Väkommen " + jsonUsers[countUser].name;
+                }
+            }
+        })
+        .catch(err => console.log(JSON.stringify(err)));
+        document.getElementById("board").style.display = "flex";
+      } else {
+        document.getElementById("board").style.display = "none";
+      }
+}
+
+welcomeIn ();
