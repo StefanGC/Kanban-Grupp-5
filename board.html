@@ -11,59 +11,11 @@
 
 </head>
 <body>
-    <div id="board" class="container">
-            <div id="todo" class="list">
-                    <h2>To do</h2>                        
-                            <div id="issue3" class="card" draggable="true">
-                                <h6>Issue 3</h6>
-                                <p>Skapa index.html som inloggning sida.</p> 
-                            </div>
-                            <div id="issue4" class="card" draggable="true">
-                                <h6>Issue 4</h6>
-                                <p>Bygga script för inloggning.</p> 
-                            </div>
-                            <div id="issue5" class="card" draggable="true">
-                                <h6>Issue 5</h6>
-                                <p>Skapa sidan för tavlan.</p> 
-                            </div>
-                            <div id="issue6" class="card" draggable="true">
-                                <h6>Issue 6</h6>
-                                <p>Bygga script för tavlan.</p> 
-                            </div>
-                            <div id="issue7" class="card" draggable="true">
-                                <h6>Issue 7</h6>
-                                <p>Skapa styles för inloggning.</p> 
-                            </div>
-                            <div id="issue8" class="card" draggable="true">
-                                <h6>Issue 8</h6>
-                                <p>Skapa styles för tavlan.</p> 
-                            </div> 
-                            <div id="i1" class="itemsList"></div>
-                            <a id="a1" style="display: block;" href="javascript:newCard('1');">+ Lägg till ett kort</a>
-                    </div>
-                    <div id="doing" class="list">
-                            <h2>Doing</h2>
-                            <div id="i2" class="itemsList"></div>
-                            <a id="a2" style="display: block;" href="javascript:newCard('2');">+ Lägg till ett kort</a>
-                    </div>
-                    <div id="test" class="list">
-                            <h2>Test</h2>
-                            <div id="i3" class="itemsList"></div>
-                            <a id="a3" style="display: block;" href="javascript:newCard('3');">+ Lägg till ett kort</a>                            
-                    </div>                    
-                    <div id="done" class="list">
-                            <h2>Done</h2>
-                            <div id="issue1" class="card" draggable="true">
-                                <h6>Issue 1</h6>
-                                <p>Skapa ett repo och bjuda in alla.</p> 
-                            </div>
-                            <div id="issue2" class="card" draggable="true">
-                                <h6>Issue 2</h6>
-                                <p>Skapa JSON fil med inloggning för alla användare.</p> 
-                            </div>
-                            <div id="i4" class="itemsList"></div>
-                            <a id="a4" style="display: block;" href="javascript:newCard('4');">+ Lägg till ett kort</a>
+    <div style="text-align: right;">
+        <H5 id="user"></H5>
+        <a href="javascript:logout();">Logga ut</a>
     </div>
+    <div id="board" class="container"></div>
 </body>
 <script src="scripts/board_script.js"></script>
 </html>
