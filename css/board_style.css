@@ -6,6 +6,21 @@
   flex-flow: row wrap;
 }
 
+.close {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
 .card {
   margin: 10px;
   width: auto;
