@@ -41,15 +41,6 @@ var lists = [];
 var configuration = [];
 
 
-
-fetch('users.json')
-  .then(response => response.json())
-  .then(function(json) {
-    document.getElementById("user").outerHTML = "Välkommen, <strong>" + json.find( ({ id }) => id === user).name + "</strong>!<br/>";
-  })
-  .catch(err => console.log(JSON.stringify(err)));
-
-
 makeLists();
 
 function makeLists() {
@@ -294,3 +285,25 @@ function logout() {
   window.open("index.html", "_self");
 }
 
+//Function för att hämta inloggad användare
+function welcomeIn () {
+  if (sessionStorage.length == 2) {
+    fetch('users.json')
+        .then(response => response.json())
+        .then(function(jsonUsers){
+            let userFound = false;
+            for(let countUser = 0; countUser < jsonUsers.length && !userFound; countUser++){
+                if (sessionStorage.getItem('usersID') === jsonUsers[countUser].id) {
+                  userFound = true;
+                  document.getElementById("welcome").innerHTML = "Väkommen " + jsonUsers[countUser].name;
+                }
+            }
+        })
+        .catch(err => console.log(JSON.stringify(err)));
+        makeLists();
+      } else {
+        window.open("index.html", "_self");
+      }
+}
+
+welcomeIn ();
