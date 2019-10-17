@@ -41,15 +41,6 @@ var lists = [];
 var configuration = [];
 
 
-
-fetch('users.json')
-  .then(response => response.json())
-  .then(function(json) {
-    document.getElementById("user").outerHTML = "Välkommen, <strong>" + json.find( ({ id }) => id === user).name + "</strong>!<br/>";
-  })
-  .catch(err => console.log(JSON.stringify(err)));
-
-
 makeLists();
 
 function makeLists() {
@@ -309,9 +300,9 @@ function welcomeIn () {
             }
         })
         .catch(err => console.log(JSON.stringify(err)));
-        document.getElementById("board").style.display = "flex";
+        makeLists();
       } else {
-        document.getElementById("board").style.display = "none";
+        window.open("index.html", "_self");
       }
 }
 
