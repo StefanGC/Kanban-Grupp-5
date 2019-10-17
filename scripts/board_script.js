@@ -40,9 +40,6 @@ var cards = [];
 var lists = [];
 var configuration = [];
 
-
-makeLists();
-
 function makeLists() {
   
   if (localStorage.getItem(user) !== null) {
