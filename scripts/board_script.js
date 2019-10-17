@@ -40,6 +40,7 @@ var cards = [];
 var lists = [];
 var configuration = [];
 
+//funktion som ritar tavlan
 function makeLists() {
   
   if (localStorage.getItem(user) !== null) {
@@ -90,6 +91,7 @@ function makeLists() {
   document.getElementById("board").insertAdjacentHTML('beforeend', html);
 }
 
+//drag and dropp block
 function handleDragStart(e) {
   dragSrcEl = this;
   prevEl = this;
@@ -182,6 +184,7 @@ var divCards = document.querySelectorAll('.list .card');
 var divList = document.querySelectorAll('.itemsList');
 [].forEach.call(divList, addDropHandlers);
 
+//funktion som skapar formen där användaren skulle kunna skapa ett nytt kort
 function newCard(id) {
   document.getElementById('a' + id).style.display = "none";
 
@@ -203,11 +206,13 @@ function newCard(id) {
   document.getElementById('a' + id).insertAdjacentHTML('afterend', html);
 }
 
+//funktion som stänger formen där man skapar ett ny kort på tavlan
 function closeNewCard(id) {
   document.getElementById('f' + id).remove();
   document.getElementById('a' + id).style.display = "block";
 }
 
+//funktion som skapar ett nytt kort
 function addNewCard(id){
   var html = "";
   cardId += 1;
@@ -237,6 +242,7 @@ function addNewCard(id){
   closeNewCard(id);
 }
 
+//funktion som ger möjlighet att flyta kort i tavlan och sparar ändringar
 function changeCardPosition(oldid, newid, newlist) {
   
   if (newid === 0) {
@@ -265,6 +271,7 @@ function changeCardPosition(oldid, newid, newlist) {
   saveConfiguration();
 }
 
+//funktion som raderar kort från tavlan och sedan sparar ändringar genom att anropa saveConfiguration funktion
 function removeCard(id) {
   document.getElementById("c" + id).remove();
   var cardIndex = configuration.findIndex( ({ cardid }) => cardid === id);
@@ -272,14 +279,21 @@ function removeCard(id) {
   saveConfiguration();
 }
 
+//function som sparar användarens kort
 function saveConfiguration() {
   localStorage.setItem(user, JSON.stringify(configuration));
   localStorage.setItem("cards", JSON.stringify(cards));
 }
 
+//funktion som ger möjlighet för användaren att logga ut
 function logout() {
   sessionStorage.clear();
   window.open("index.html", "_self");
+}
+
+//funktion som ger möjlighet för användaren att rensa sina kort från tavlan
+function clearBoard(){
+  localStorage.removeItem(user);
 }
 
 //Function för att hämta inloggad användare
@@ -298,9 +312,9 @@ function welcomeIn () {
         })
         .catch(err => console.log(JSON.stringify(err)));
         makeLists();
+        
       } else {
         window.open("index.html", "_self");
       }
-}
-
+    }
 welcomeIn ();
