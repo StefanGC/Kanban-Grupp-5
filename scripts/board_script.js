@@ -300,7 +300,7 @@ function clearBoard(){
 
 //Function för att hämta inloggad användare
 function welcomeIn () {
-  if (sessionStorage.length == 2) {
+  if (sessionStorage.getItem('usersID') !== null) {
     fetch('users.json')
         .then(response => response.json())
         .then(function(jsonUsers){
