@@ -294,6 +294,8 @@ function logout() {
 //funktion som ger möjlighet för användaren att rensa sina kort från tavlan
 function clearBoard(){
   localStorage.removeItem(user);
+  document.getElementById("board").innerHTML = "";
+  makeLists();
 }
 
 //Function för att hämta inloggad användare
