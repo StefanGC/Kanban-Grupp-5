@@ -40,6 +40,10 @@ var cards = [];
 var lists = [];
 var configuration = [];
 
+//om man är inloggad 
+if (sessionStorage.getItem('usersID') !== null)
+  makeLists();
+
 //funktion som ritar tavlan
 function makeLists() {
   
@@ -294,8 +298,7 @@ function logout() {
 //funktion som ger möjlighet för användaren att rensa sina kort från tavlan
 function clearBoard(){
   localStorage.removeItem(user);
-  document.getElementById("board").innerHTML = "";
-  makeLists();
+  window.open("board.html", "_self");
 }
 
 //Function för att hämta inloggad användare
@@ -313,7 +316,6 @@ function welcomeIn () {
             }
         })
         .catch(err => console.log(JSON.stringify(err)));
-        makeLists();
         
       } else {
         window.open("index.html", "_self");
