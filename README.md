@@ -1,4 +1,4 @@
-# Projektplanering: Kanban Meta
+# [YTMVP9] Inlämning 4: Projektplanering Kanban Meta
 
 Du ska delta under en gruppredovisning där ni presenterar gruppens planering för Kanban-projektet. Din grupp kommer under modulens första vecka få tilldelat en mötestid för ett Zoom-möte där samtliga gruppmedlemmar förväntas delta.
 
